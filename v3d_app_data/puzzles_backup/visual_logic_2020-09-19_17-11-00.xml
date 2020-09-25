@@ -1,0 +1,83 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="300.5" scrolly="359.49999999999994" scale="0.9"></tab>
+  <tab name="main" type="MainTab" active="true" scrollx="263.8958889502719" scrolly="258.72206221862774" scale="0.6241985657254315">
+    <block xmlns="https://developers.google.com/blockly/xml" type="bloom" id="tC5FS?RPP)6bi[2eVZdL" x="-110" y="-370">
+      <value name="THRESHOLD">
+        <shadow type="number_slider" id="mIaA/4G{ir;;%]JJ1^F}">
+          <field name="NUM" min="0" max="10" step="0.1">0.8</field>
+        </shadow>
+      </value>
+      <value name="STRENGTH">
+        <shadow type="number_slider" id="z-e)z)qd3BhnYnMb|La]">
+          <field name="NUM" min="0" max="10" step="0.1">0.3</field>
+        </shadow>
+      </value>
+      <value name="RADIUS">
+        <shadow type="number_slider" id="Y}Up/aik4]+EImA0W@w:">
+          <field name="NUM" min="0" max="10" step="0.1">0.5</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="everyFrame" id="[TIFW{1js[!b;ki^6w0j" x="-110" y="-230">
+      <statement name="DO">
+        <block type="controls_ifelse" id="@UP]Bmd]|GQ4Z0KJQ$]1">
+          <statement name="DO0">
+            <block type="disableRendering" id="*l3W*b]_RfA|pL_7:)bL">
+              <field name="AA">TRUE</field>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="enableRendering" id="1[BrZ-r6kULD7@hT?Vx;"/>
+          </statement>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="setHTMLElemStyle" id="QuVW!0D#fV8^]R#QB=ev" x="-290" y="-10">
+      <field name="PROPERTY">minHeight</field>
+      <field name="PARENT">FALSE</field>
+      <value name="VALUE">
+        <block type="text" id="XGG^#N!~g9+,P=(%;hnQ">
+          <field name="TEXT">4350px</field>
+        </block>
+      </value>
+      <value name="ID">
+        <block type="DOMObjectSelector" id="9j{9,mm|ZH1D|h^0zh/b">
+          <field name="DOM_OBJECT">BODY</field>
+        </block>
+      </value>
+      <next>
+        <block type="setHTMLElemStyle" id="luN7TQM+)Sb,?c+/F]F(">
+          <field name="PROPERTY">overflowY</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="text" id="+yT:Vl}IAPCF2+8Ui@sY">
+              <field name="TEXT">scroll</field>
+            </block>
+          </value>
+          <value name="ID">
+            <block type="DOMObjectSelector" id="vjX*[B7[1_?;eT_-_0$}">
+              <field name="DOM_OBJECT">BODY</field>
+            </block>
+          </value>
+          <next>
+            <block type="setHTMLElemStyle" id=",]+S8h]gV:0{/!{!Y?,:">
+              <field name="PROPERTY">position</field>
+              <field name="PARENT">FALSE</field>
+              <value name="VALUE">
+                <block type="text" id="P#5-=IYeVtZHM@{rTjWg">
+                  <field name="TEXT">fixed</field>
+                </block>
+              </value>
+              <value name="ID">
+                <block type="DOMObjectSelector" id="D=LUNy:z[TV,)w5ZtRxe">
+                  <field name="DOM_OBJECT">CONTAINER</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </tab>
+  <editorsettings viewport-x="696.5999694824218" viewport-y="32.000003814697266" viewport-w="308.4" viewport-h="397.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>
