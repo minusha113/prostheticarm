@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- __V3D_PUZZLES__ - enable Puzzles button in the App Manager -->
+<!-- __V3D_TEMPLATE__ - template-based file; delete this line to prevent this file from being updated -->
+<html lang="en">
+<head>
+  <title>Verge3D Web Interactive</title>
+  <meta charset="utf-8"><!DOCTYPE html>
+<!-- __V3D_PUZZLES__ - enable Puzzles button in the App Manager -->
+<!-- __V3D_TEMPLATE__ - template-based file; delete this line to prevent this file from being updated -->
+<html lang="en">
+<head>
+  <title>Developing a gui and analysing emg signals for prosthetic arm</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <!-- Search Engines -->
+  <meta name="description" content="Interactive 3D Web application made with Verge3D. Immerse yourself in amazing graphics experience offered by state-of-the WebGL and HTML5 technologies.">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Verge3D Web Interactive">
+  <meta name="twitter:description" content="Interactive 3D Web application made with Verge3D. Immerse yourself in amazing graphics experience offered by state-of-the WebGL and HTML5 technologies.">
+  <meta name="twitter:image:src" content="https://cdn.soft8soft.com/images/player_socials.jpg">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Verge3D Web Interactive">
+  <meta property="og:description" content="Interactive 3D Web application made with Verge3D. Immerse yourself in amazing graphics experience offered by state-of-the WebGL and HTML5 technologies.">
+  <meta property="og:image" content="https://cdn.soft8soft.com/images/player_socials.jpg">
+  <meta property="og:type" content="website">
+
+  <meta name="generator" content="Verge3D 3.2.0">
+  <style>
+
+  .glow {
+    line-height: 1.2;
+    font-family:"Lucida Console", Monaco, monospace;z-index:2;
+    color: #fff;
+    text-align: left;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 0px #fff, 0 0 10px #fff, 0 0 20px #0B0D1A, 0 0 30px #0B0D1A, 0 0 40px #0B0D1A, 0 0 50px #0B0D1A, 0 0 60px #0B0D1A;
+    }
+    
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 20px #090000, 0 0 30px #090000, 0 0 40px #090000, 0 0 50px #090000, 0 0 60px #090000, 0 0 70px #090000;
+    }
+  }
+  .example_e {
+border: none;
+background: transparent;
+color: white !important;
+font-weight: 100;
+font-size: large;
+padding: 20px;
+text-transform: uppercase;
+border-radius: 6px;
+display: inline-block;
+transition: all 0.3s ease 0s;
+  }
+.example_e:hover {
+background: white;
+color: black !important;
+font-weight: 700 !important;
+letter-spacing: 3px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.3s ease 0s;
+}
+  </style>
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+  <link rel="manifest" href="media/manifest.json">
+  <link rel="mask-icon" href="media/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+
+  
+  <script src="v3d.js"></script>
+  <script src="swiss_army_knife.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="swiss_army_knife.css">
+</head>
+
+<body>
+  <div id="v3d-container">
+    <div id="fullscreen_button" class="fullscreen-button fullscreen-open" title="Toggle fullscreen mode"></div>
+  </div>
+</body>
+
+</html>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <!-- Search Engines -->
+  <meta name="description" content="Interactive 3D Web application made with Verge3D. Immerse yourself in amazing graphics experience offered by state-of-the WebGL and HTML5 technologies.">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Verge3D Web Interactive">
+  <meta name="twitter:description" content="Interactive 3D Web application made with Verge3D. Immerse yourself in amazing graphics experience offered by state-of-the WebGL and HTML5 technologies.">
+  <meta name="twitter:image:src" content="https://cdn.soft8soft.com/images/player_socials.jpg">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Verge3D Web Interactive">
+  <meta property="og:description" content="Interactive 3D Web application made with Verge3D. Immerse yourself in amazing graphics experience offered by state-of-the WebGL and HTML5 technologies.">
+  <meta property="og:image" content="https://cdn.soft8soft.com/images/player_socials.jpg">
+  <meta property="og:type" content="website">
+
+  <meta name="generator" content="Verge3D 3.3.1">
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+  <link rel="manifest" href="media/manifest.json">
+  <link rel="mask-icon" href="media/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+
+  
+  <script src="v3d.js"></script>
+  <script src="bci.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="bci.css">
+</head>
+
+<body>
+  <div id="v3d-container">
+    <div style="position:absolute;top:8px;left:10%"><h1 class="glow" style="font-size: 24px;">Developing a gui and analysing emg signals for <br>prosthetic arm</h1></div>
+    <div style="position:absolute;top:535px;left:5%;width:30%"><h1 class="glow">About</h1><p class="glow">Bionics hand using machine learning algorithms<br><br>Analysing EMG signals of the amputated person and classifying it to perform a prescribed action based on real time input signal after prediction of the hand gesture that the amputee wants to perform</p></div>
+    <div style="position:absolute;top:1200px;left:5%;width:30%"><h1 class="glow">Supervised By</h1><p class="glow">Mr. Sushil Shrestha(DoCSE, DLR Lab)<br>Mr. Pratisthit Lal Shrestha(ME, Design Lab</p></div>
+    <div style="position:absolute;top:850px;left:75%;width:30%"><h1 class="glow">Team</h1><p class="glow">Prajwal Bhandary<br>Asmita Dhungana<br>Minusha Gurung<br>Prarthana Prasai<br>Rohan Shrestha<br>Adil Tuladhar</p></div>
+    <div style="position:absolute;top:1470px;left:75%;width:30%"><h1 class="glow">In Collaboration<br>With</h1><p class="glow">Design Lab<br>Mechanical Department<br>Mr. Sojan Prajapati<br>Mr. Raman Silwal</p></div>
+    <div style="position:absolute;top:2000px;left:75%;width:30%"><h1 class="glow">Classifiers used</h1><p class="glow">Stochastic Gradient Descent<br>Tree<br>K-nearest neighbors</p></div>
+    <div style="position:absolute;top:2300px;left:5%;width:30%"><h1 class="glow">Poses Considered</h1><p class="glow">Hand at rest<br>Hand clenched in fist<br>Wrist Extention<br>Wrist Flexion<br>Ulnar Deviation<br>Radial Deviation</p></div>
+    <div style="position:absolute;top:2600px;left:70%;width:30%"><h1 class="glow">Actual Gestures vs Predicted Gestures</h1><img src="https://raw.githubusercontent.com/minusha113/prostheticarm/master/graph.png" width="400" height="240"></div>
+    <div class="button_cont" align="center" style="position:absolute;top:3800px;left:36%;width:30%"><a class="example_e" href="https://minusha113.github.io/simulation/" target="_blank" rel="nofollow noopener">Test Simulation</a></div>
+    <div id="fullscreen_button" class="fullscreen-button fullscreen-open" title="Toggle fullscreen mode"></div>
+  </div>
+</body>
+
+</html>
